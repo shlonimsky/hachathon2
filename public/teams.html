@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/" />
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        footer{
+            position: fixed;
+            bottom: 5px;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <nav>
@@ -13,9 +22,9 @@
     <div id="root">
         <h1>TEAMS</h1>
     </div>
-    <section id="teams_container">container</section>
+    <section id="teams_container"></section>
     <footer>
-        <section class="alert_error not_visible" id="error">THE AMOUNT OF TEAMS HAS TO BE MORE THAN 2</section>
+        <section class="red not_visible" id="error">THE AMOUNT OF TEAMS HAS TO BE MORE THAN 2</section>
         <section>
             <div class="btn">
                 <a href="/home">BACK</a>

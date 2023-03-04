@@ -13,7 +13,7 @@ async function showChoosedElements(id,atribute){
     const div = document.getElementById(id)
     for (let i=0; i<=2; i++){
         if (div.children[i].textContent == atribute) div.children[i].classList.toggle("picked")
-        else div.children[i].classList.toggle("not_picked")
+        else div.children[i].classList.remove("picked")
     }
 }
 

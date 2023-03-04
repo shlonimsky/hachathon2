@@ -122,7 +122,7 @@ function addMember(e){
     let newMember = document.getElementById("member").value
     if (!newMember) return e.preventDefault()
     else if (team.members.includes(newMember)){
-        const error = document.getElementById("error")
+        const error = document.getElementById("error1")
         error.classList.toggle("not_visible")
         setTimeout((error) => {
             error.classList.toggle("not_visible")
@@ -157,7 +157,12 @@ function checkTheForm(e){
     // e.preventDefault()
     const teamName = inputName.value
     console.log(teamName)
-    if (!teamName) return e.preventDefault();
+    if (!teamName) {
+        e.preventDefault();
+        document.getElementById("error2").classList.toggle("not_visible")
+        setTimeout(() => document.getElementById("error2").classList.toggle("not_visible"),3000)
+        return 
+    }
 
     team.name = teamName
     console.log(allTeams)

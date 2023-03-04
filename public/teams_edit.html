@@ -9,11 +9,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Teams Edit</h1>
     <main>
         <form>
             <div>
-                <h5>TEAM EDITOR</h5>
+                <h1>TEAM EDITOR</h1>
             </div>
             <div>
                 <label><h5>TEAM TITLE</h5></label>
@@ -29,7 +28,7 @@
             </div>
             <div>
                 <div class="btn main_btn" onClick="addMember(event)">ADD MEMBER</div>   
-                <div class="error not_visible">This member is already exist</div>
+                <div id="error1" class="red not_visible">This member is already exist</div>
             </div>
         </form>
         <section id="members_container"></section>
@@ -44,6 +43,9 @@
 
     </main>
     <footer>
+        <div id="error2" class="not_visible red">
+            <h5>PLEASE, ENTER THE NAME OF TEAM</h5>
+        </div>
         <div class="btn delete_team">
             <a href="/teams" onClick="deleteTeam(event)">DELETE TEAM</a>
         </div>

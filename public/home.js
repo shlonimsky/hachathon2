@@ -8,5 +8,5 @@
 
 
 function resetLocalStorage(e){
-    localStorage.setItem("teams", [])
+    localStorage.clear()
 }
