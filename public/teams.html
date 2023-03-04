@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/settings">SETTINGS</a>
+    </nav>
+    <div id="root">
+        <h1>TEAMS</h1>
+    </div>
+    <section id="teams_container">container</section>
+    <footer>
+        <section class="alert_error not_visible" id="error">THE AMOUNT OF TEAMS HAS TO BE MORE THAN 2</section>
+        <section>
+            <div class="btn">
+                <a href="/home">BACK</a>
+            </div>
+            <div class="main_btn btn">
+                <a href="/settings" id="continue_btn" onClick="checkAmountOfTeams(event)">CONTINUE</a>
+            </div>
+        </section>
+    </footer>
+    
+    <script src="teams.js"></script>
+</body>
+</html>

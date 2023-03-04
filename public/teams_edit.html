@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Teams Edit</h1>
+    <main>
+        <form>
+            <div>
+                <h5>TEAM EDITOR</h5>
+            </div>
+            <div>
+                <label><h5>TEAM TITLE</h5></label>
+            </div>
+            <div>
+                <input type="text" id="name" placeholder="team's name" onClick="clearField(event)" onLoad="showTeamName()">
+            </div>
+            <div>
+                <label><h5>MEMBER'S NAME</h5></label>
+            </div>
+            <div>
+                <input type="text" id="member" placeholder="members" onClick="clearField(event)">
+            </div>
+            <div>
+                <div class="btn main_btn" onClick="addMember(event)">ADD MEMBER</div>   
+                <div class="error not_visible">This member is already exist</div>
+            </div>
+        </form>
+        <section id="members_container"></section>
+        <section>
+            <h5>TEAM'S COLOR</h5>
+            <div class="grid_3_columns" id="color_container"></div>
+        </section>
+        <section>
+            <h5>TEAM'S AVATAR</h5>
+            <div class="grid_3_columns" id="avatar_container"></div>
+        </section>
+
+    </main>
+    <footer>
+        <div class="btn delete_team">
+            <a href="/teams" onClick="deleteTeam(event)">DELETE TEAM</a>
+        </div>
+        <div class="main_btn btn">
+            <a href="/teams" onClick="checkTheForm(event)">SAVE THE TEAM</a>
+        </div>
+    </footer>
+    <!-- <section id="pop_up">
+        <div>
+            <div>
+                <h1>ARE YOU SURE YOU WANT TO DELETE THIS TEAM?</h1>
+            </div>
+            <div>
+                <button>CANCEL</button>
+                <button>SUBMIT</button>
+            </div>
+        </div>
+    </section> -->
+
+    <script src="teams_edit.js"></script>
+</body>
+</html>
