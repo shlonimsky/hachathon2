@@ -12,7 +12,7 @@ body{
     background-size: cover
 }
 header{
-    font-size: 2em;
+    font-size: 3vh;;
     color: white;
 }
 .pop_up{
@@ -44,13 +44,15 @@ header{
     border-radius: 20px;
 }
 #word{
-    font-size: 3em;
-}
+    font-size: 8vh;}
 
 a{
     text-decoration: none;
     color: white;
-    padding: 30% 40%;
+    padding: 20% 25%;
+}
+i{
+    cursor: pointer;
 }
 .pop_up>div{
     width: 70%;
@@ -63,14 +65,16 @@ a{
     justify-content: space-around;
     align-items: center;
 }
+
 .btn{
     border-radius: 20px;
     padding: 1em 0rem;
     text-align: center;
     margin-top: 2%;
-    font-size: 2em;
+    font-size: 5vh;
     width: 45%;
     color: white;
+    cursor: pointer;
 }
 .btn_pause{
     width: 100%;

@@ -8,9 +8,25 @@ body{
     background-image: url('./images/bg.jpg');
     background-position: left top;
     background-size: cover;
-    color:white
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    color:white;
+    min-height: 100%;
 }
-body,footer,main{
+#root{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    max-width: 1000px;
+    min-height: 100vh;
+
+}
+main{
     max-width: 900px;
     text-align: center;
 }
@@ -24,10 +40,11 @@ main{
     gap: 15px;
     width: 100vw;
 }
-h5,h6,h4,.score{
+h2, h5,h6,h4,.score{
     margin: 1em;
-    font-size: 2em;
+    font-size: 2.5vh;
     color: black;
+    color: white;
 }
 h1{
     font-size: 3em;
@@ -38,6 +55,8 @@ h1{
     justify-content: space-around;
     background-color: #e3e2e2;;
     font-size: 2em;
+    padding: 1vh 0;
+    color: #2196F3;
 }
 #timerLength, #scoreToWin {
     display: flex;
@@ -66,15 +85,27 @@ h1{
     display: flex;
     flex-direction: column;
     width: 100%;
-
 }
 #now_is_playing {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-
 }
+#teams_container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 10%;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#avatar_container{
+    padding-bottom: 30vh;
+}
+
 .picked{
 background-color: orange;
 color: white;
@@ -84,9 +115,8 @@ color: white;
 }
 input{
     width: 100%;
-    font-size: 2em;
+    font-size: 2.5vh;
     padding: 0.75rem 1.5rem;
-    font-family: inherit;
 }
 
 .grid_3_columns{
@@ -94,36 +124,52 @@ input{
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
 }
-#teams_container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
+.flex_center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-}
-#avatar_container{
-    padding-bottom: 50px;
 }
 
 img{
-    width: 150px;
-    height: 200px;
+
     cursor: pointer;
     margin: 5%;
     padding: 10px;
+    max-width: 137px;
+    min-width: 50px;
+    height: auto;
 }
 
 .color_box{
-    width: 100px;
-    height: 100px;
+    width: 10vh;
+    height: 10vh;
     border: solid;
     border-radius: 50%;
     cursor: pointer;
     margin: 5%;
+    box-shadow: 0 5px 10px 2px rgb(34 60 80 / 20%);
 }
 a{
     text-decoration: none;
     color: white;
     padding: 1em, 100%;
+}
+footer{
+    position: fixed;
+    bottom: 5px;
+    width: 100%;
+
+}
+.pointer{
+    cursor: pointer;
+}
+span{
+    font-size: 4vh;
+    padding: 0 10px;
+}
+.inqueue{
+    color : #f58683;
 }
 
 .btn{
@@ -132,73 +178,67 @@ a{
   padding: 1em;
   text-align: center;
   margin-top: 2%;
-  font-size: 2em;
+  font-size: 2.5vh;
     background-color: #ffbb70;
+    cursor: pointer;
 }
-
+.avatar {
+    border: solid;
+    border-radius: 50%;
+    min-width: 80px;
+    min-width: 160px;
+    /* max-width: 200%; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+    box-shadow: 0 5px 10px 2px rgb(34 60 80 / 20%);
+}
 .main_btn{
-    /* width: 100%; */
+    width: 100%;
     background-color: #89bef6; 
 }
 .delete_team{
     background-color: #f58683;
-    /* width: 100%; */
+    width: 100%;
 }
 
 .blue{
     background-color: #76b2f3;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .red{
     background-color: #f58683;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .green{
     background-color: #7ceaa2;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .white{
     background-color: white;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .yellow{
     background-color: #ffff72;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .pink{
     background-color: pink;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .orange{
     background-color: #ffbb70;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
+
 }
 .black{
     background-color: #4e4a4a;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
 }
 .aqua{
     background-color: #a7f3ee;
-    border: solid;
-    border-radius: 50%;
-    width: 250px;
 }
+
+
 /* slider */
 
 .switch {

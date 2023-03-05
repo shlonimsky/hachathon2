@@ -15,7 +15,6 @@ function mainGameFunction(){
     getRandomWords()
     startTimer()
 
-   
 }
 mainGameFunction()
 
@@ -96,8 +95,9 @@ function checkTheLength(){
 function gameIsEnded (){
     teamPlaying.isPlaying = !teamPlaying.isPlaying
 
-    if (teamPlaying.memberQueue+1 === teamPlaying.memberQueue.length) teamPlaying.memberQueue += 1;
+    if (teamPlaying.memberQueue+1 == teamPlaying.members.length) teamPlaying.memberQueue ++;
     else teamPlaying.memberQueue = 0;
+
 
     const index = allTeams.indexOf(teamPlaying)
 

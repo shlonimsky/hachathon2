@@ -32,7 +32,7 @@ async function showTheMainTeam(team){
     const img = document.createElement("img");
     const h5 = document.createElement("h5");
 
-    div.classList.add(team.color);
+    div.classList.add(team.color,"avatar");
     img.src = team.avatar;
     h5.textContent = team.name;
 
@@ -45,17 +45,17 @@ async function showScoreBoard(team){
     const container = document.createElement("div")
 
     const div1 = document.createElement("div")
-    div1.classList.add(team.color)
+    div1.classList.add(team.color,"avatar")
     const img = document.createElement("img")
     img.src = team.avatar
 
     const div2 = document.createElement("div") // container for team name and members' names
-    const h6 = document.createElement("h6") //team name
-    h6.textContent = team.name
+    const h2 = document.createElement("h2") //team name
+    h2.textContent = "TEAM  "+team.name
     const div3 = document.createElement("div") //container for members' names
     for (let i=0; i<team.members.length; i++) {
         const span = document.createElement("span")
-        span.textContent = team.members[1]
+        span.textContent = team.members[i]
         if (team.memberQueue === i) span.classList.add("inqueue")
         div3.appendChild(span)
     }
@@ -66,7 +66,7 @@ async function showScoreBoard(team){
 
     div1.appendChild(img)
     container.appendChild(div1)
-    div2.appendChild(h6)
+    div2.appendChild(h2)
     div2.appendChild(div3)
     container.appendChild(div2)
     container.appendChild(div4)

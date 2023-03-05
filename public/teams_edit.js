@@ -92,7 +92,9 @@ function showMembers(name) {
     const div2 = document.createElement("div");
     div2.textContent = name;
     const div3 = document.createElement("div");
-    div3.textContent = "-"
+    const icon = document.createElement("i")
+    icon.classList.add("fa-solid", "fa-delete-left")
+    div3.appendChild(icon)
     div3.id = name
     div3.addEventListener("click", removeMember)
 
@@ -117,8 +119,6 @@ function changeAvatar(e){
 }
 
 function addMember(e){
-    console.log("Add member function")
-    console.log(e)
     let newMember = document.getElementById("member").value
     if (!newMember) return e.preventDefault()
     else if (team.members.includes(newMember)){
@@ -150,13 +150,11 @@ function removeMember(e){
     const element = e.currentTarget.parentNode
     team.members.splice(team.members.indexOf(element.id),1)
     element.remove()
-    console.log(team)
 }
 
 function checkTheForm(e){
     // e.preventDefault()
     const teamName = inputName.value
-    console.log(teamName)
     if (!teamName) {
         e.preventDefault();
         document.getElementById("error2").classList.toggle("not_visible")
@@ -165,7 +163,6 @@ function checkTheForm(e){
     }
 
     team.name = teamName
-    console.log(allTeams)
 
     localStorage.setItem("teams",JSON.stringify(allTeams))
 

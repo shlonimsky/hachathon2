@@ -18,10 +18,12 @@ function showTheTeams({id,avatar,color,members,name}){
     console.log(container)
 
     const aTag = document.createElement("a");
+    aTag.classList.add("flex_center")
     aTag.id = `${id}`
     aTag.href = `/teams/edit/${id}`
 
     const articleAvatar = document.createElement('article');
+    articleAvatar.classList.add("flex_center")
     const div1 = document.createElement("div");
     div1.classList.add("avatar",color);
     const img = document.createElement("img");
@@ -29,6 +31,8 @@ function showTheTeams({id,avatar,color,members,name}){
 
 
     const articleText = document.createElement("article");
+    articleText.classList.add("flex_center")
+
     const h4 = document.createElement("h4")
     h4.textContent = name
     articleText.appendChild(h4)

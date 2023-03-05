@@ -15,6 +15,7 @@
     </style>
 </head>
 <body>
+    <div id="root">
     <main>
         <div>
             <h1>SETTINGS</h1>
@@ -23,17 +24,17 @@
             <h5>TIMER DURATION (in sec)</h5>
         </div>
         <div class="" id="timerLength">
-            <div onClick="changeTimerLength(event)">30</div>
-            <div onClick="changeTimerLength(event)">60</div>
-            <div onClick="changeTimerLength(event)">90</div>
+            <div class="pointer"  onClick="changeTimerLength(event)">30</div>
+            <div class="pointer"  onClick="changeTimerLength(event)">60</div>
+            <div class="pointer"  onClick="changeTimerLength(event)">90</div>
         </div>
         <div>
             <h5>GAME DURATION (in points)</h5>
         </div>
         <div class="" id="scoreToWin">
-            <div onClick="changeGameLength(event)">25</div>
-            <div onClick="changeGameLength(event)">50</div>
-            <div onClick="changeGameLength(event)">100</div>
+            <div class="pointer" onClick="changeGameLength(event)">25</div>
+            <div class="pointer" onClick="changeGameLength(event)">50</div>
+            <div class="pointer" onClick="changeGameLength(event)">100</div>
         </div>
         <div id="points_container">
             <h5>LOSE POINTS</h5> 
@@ -65,6 +66,7 @@
             <a href="/score" onClick="saveSettings()">CONTINUE</a>
         </div>
     </footer>
+    </div>
     <script src="settings.js"></script>
 </body>
 </html>
