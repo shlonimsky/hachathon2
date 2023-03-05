@@ -1,0 +1,122 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    letter-spacing: 3px;
+    font-size: 120%;
+    font-family: "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";;
+}
+body{
+    height: 100vh;
+    background-image: url('./images/bg.jpg');
+    background-position: left top;
+    background-size: cover
+}
+header{
+    font-size: 2em;
+    color: white;
+}
+.pop_up{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: cornflowerblue;
+}
+
+#card_container{
+    width: 100%;
+    height: 60vh;
+    margin-top: 10%;
+}
+#car_holder{
+    background-color: white;
+    width: 80vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+#word{
+    font-size: 3em;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    padding: 30% 40%;
+}
+.pop_up>div{
+    width: 70%;
+}
+.pop_up a{
+    padding: 0;
+}
+.flex_row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.btn{
+    border-radius: 20px;
+    padding: 1em 0rem;
+    text-align: center;
+    margin-top: 2%;
+    font-size: 2em;
+    width: 45%;
+    color: white;
+}
+.btn_pause{
+    width: 100%;
+    font-size: 0.9em;
+    height: 150px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.tomato {
+    background-color: #f58683;
+}
+.main_btn{
+    background-color: #90dc82;
+}
+.blue{
+    background-color: #007bff;;
+}
+
+.red{
+    background-color: #f58683;;
+}
+.green{
+    background-color: #4bbf73;
+}
+.white{
+    background-color: white;
+}
+.yellow{
+    background-color: yellow;
+}
+.pink{
+    background-color: pink;
+}
+.orange{
+    background-color: orange;
+}
+.black{
+    background-color: black;
+}
+.aqua{
+    background-color: aqua;
+}
+.not_visible{
+    display: none;
+}

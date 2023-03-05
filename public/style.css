@@ -4,6 +4,12 @@
     letter-spacing: 3px;
     font-family: "Nunito Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";;
 }
+body{
+    background-image: url('./images/bg.jpg');
+    background-position: left top;
+    background-size: cover;
+    color:white
+}
 body,footer,main{
     max-width: 900px;
     text-align: center;
@@ -18,9 +24,9 @@ main{
     gap: 15px;
     width: 100vw;
 }
-h5,h6,h4{
+h5,h6,h4,.score{
     margin: 1em;
-    font-size: 1.3em;
+    font-size: 2em;
     color: black;
 }
 h1{
@@ -33,19 +39,41 @@ h1{
     background-color: #e3e2e2;;
     font-size: 2em;
 }
-#timerLength, #scoreToWin{
+#timerLength, #scoreToWin {
     display: flex;
     justify-content: space-around;
     font-size: 3em;
     background-color: #e3e2e2;
 }
+#score_board>div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
 #timerLength>div,#scoreToWin>div{
     width: 33%;
     border: solid 1px gray;
 }
-#points_container{
+#points_container, .flex{
     display: flex;
-    
+    align-items: center;
+    justify-content: center;
+}
+
+#score_board{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+}
+#now_is_playing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 .picked{
 background-color: orange;
@@ -78,8 +106,10 @@ input{
 
 img{
     width: 150px;
+    height: 200px;
     cursor: pointer;
     margin: 5%;
+    padding: 10px;
 }
 
 .color_box{
@@ -93,6 +123,7 @@ img{
 a{
     text-decoration: none;
     color: white;
+    padding: 1em, 100%;
 }
 
 .btn{
@@ -102,45 +133,71 @@ a{
   text-align: center;
   margin-top: 2%;
   font-size: 2em;
-    background-color: orange;
+    background-color: #ffbb70;
 }
 
 .main_btn{
     /* width: 100%; */
-    background-color: #007bff;; 
+    background-color: #89bef6; 
 }
 .delete_team{
-    background-color: #d9534f;;
+    background-color: #f58683;
     /* width: 100%; */
 }
-#error1, #error2, #error{
-    color: white;
-    padding: 5px;
-}
 
+.blue{
+    background-color: #76b2f3;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
+}
 .red{
-    background-color: #d9534f;;
+    background-color: #f58683;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .green{
-    background-color: #4bbf73;
+    background-color: #7ceaa2;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .white{
     background-color: white;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .yellow{
-    background-color: yellow;
+    background-color: #ffff72;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .pink{
     background-color: pink;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .orange{
-    background-color: orange;
+    background-color: #ffbb70;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .black{
-    background-color: black;
+    background-color: #4e4a4a;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 .aqua{
-    background-color: aqua;
+    background-color: #a7f3ee;
+    border: solid;
+    border-radius: 50%;
+    width: 250px;
 }
 /* slider */
 
@@ -202,6 +259,13 @@ a{
   
   .slider.round:before {
     border-radius: 50%;
+}
+#error1, #error2, #error{
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1.3em;
+    width: 100%;
 }
 .not_visible{
     display: none;

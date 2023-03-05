@@ -1,5 +1,4 @@
 const express = require('express');
-// const words = require('../modules/words.js')
 const allWords = require('../database/words1.js')
 
 

@@ -5,35 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="game.css">
 </head>
 <body>
 
-    <header>
+    <header class="flex_row">
+
         <div onClick="pauseGame(event)">
-            <i class="" id="pause">PAUSE</i>
+            <i class="fa-solid fa-pause" id="pause"></i>
         </div>
-        <div class="not_visible">
-            <h3>THE LAST WORD</h3>
-        </div>
+
         <div class="timer" id="timer"></div>
+
     </header>
 
-    <div class="not_visible">
-        <h4>PAUSE</h4>
-        <div class="btn">CONTINUE</div>
-        <div class="btn tomato">
-            <a href="/"></a>
+    <main>
+    <div id="pop_up" class="pop_up not_visible">
+        <div>
+            <h4>PAUSE</h4>
+            <div class="btn btn_pause main_btn" onClick="pauseGame(event)">CONTINUE</div>
+            <div class="btn btn_pause tomato">
+                <a href="/home" onClick="quitTheGame(event)">QUIT THE GAME</a>
+            </div>
         </div>
     </div>
 
-    <div id="card_container">
+    <div class="flex_row" id="card_container">
         <div id="car_holder">
             <p id="word"></p>
         </div>
     </div>
-    <main>
-    <footer>
+    </main>
+
+
+    <footer class="flex_row">
         <div class="tomato btn" onClick="showNewWord(event)">
             <a href="/score" id="no"> NO</a></div>
         <div class="btn main_btn" onClick="showNewWord(event)">
@@ -41,7 +47,7 @@
         </div>
     </footer>
 
-    </main>
+   
     <script src="game.js"></script>
 </body>
 </html>

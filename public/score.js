@@ -24,6 +24,8 @@ function setOrderQueue (){
     allTeams.forEach(team => showScoreBoard(team));
 }
 
+setOrderQueue()
+
 
 async function showTheMainTeam(team){
     const div = document.createElement("div");
@@ -59,6 +61,7 @@ async function showScoreBoard(team){
     }
 
     const div4 = document.createElement("div")
+    div4.classList.add("score")
     div4.textContent = team.score
 
     div1.appendChild(img)

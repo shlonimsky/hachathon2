@@ -15,15 +15,6 @@ function mainGameFunction(){
     getRandomWords()
     startTimer()
 
-isPlaying
-: 
-false
-memberQueue
-: 
-0
-members
-: 
-[]
    
 }
 mainGameFunction()
@@ -37,7 +28,7 @@ function startTimer(){
 
 function checkTimer () {
     const endGame = new Promise((resolve) => {
-        if (timer===0) resolve("Time is over");
+        if (timer===0) resolve("THE LAST WORD");
     }).then(res => showTimer(res))
 
     showTimer(timer)
@@ -46,9 +37,14 @@ function checkTimer () {
 }
 
 function pauseGame(e){
-    const div = e.target
-    div.classList.toggle("pause")
-    if (div.classList.contains("pause")) return clearInterval(interval)
+    const pause_container = document.getElementById("pause")
+    document.getElementById("pop_up").classList.toggle("not_visible")
+    document.querySelector("footer").classList.toggle("not_visible")
+    
+    pause_container.classList.toggle("fa-play")
+    // popUp.classList.toggle("not_visible")
+   
+    if (pause_container.classList.contains("fa-play")) return clearInterval(interval)
     startTimer()
 }
 
@@ -77,14 +73,14 @@ async function getRandomWords(){
 
 
 function showNewWord(e){
-    e.preventDefault()
+    // e.preventDefault()
 
     const isGuessed = e.target.id
     if (isGuessed === "yes") teamPlaying.score ++;
     else if (settings.loosePoints) teamPlaying.score --;
 
     if (timer === 0) return gameIsEnded()
-    // e.preventDefault()
+    e.preventDefault()
     wordsForRaund.splice(0,1)
     containerWord.textContent=wordsForRaund[0]
     checkTheLength()

@@ -1,33 +1,6 @@
 
     const allTeams = JSON.parse(localStorage.getItem("teams")) || []
-    // || [
-        // {
-        //     id : 1,
-        //     avatar : "images/a1.png",
-        //     color : "blue",
-        //     isPlaying : true,
-        //     memberQueue : 0,
-        //     members : [],
-        //     name : "Red",
-        //     score : 0,
-        // },
-        // {
-        //     id : 2,
-        //     avatar : "./images/a2.png",
-        //     color : "green",
-        //     isPlaying : false,
-        //     memberQueue : 0,
-        //     members : [],
-        //     name : "Green",
-        //     score : 0,
-        // }];
-
-        // try {
-        //     allTeams = JSON.parse(allTeams)
-        // } catch (error) {
-        //     console.log(error)
-        // }
-        // console.log(allTeams)
+  
         
         let id=1;
         if (allTeams.length>0){
@@ -78,7 +51,7 @@ function showTheTeams({id,avatar,color,members,name}){
 function checkAmountOfTeams(e){
 
 
-    if (!allTeams || allTeams.length===0){
+    if (allTeams.length<2 || !allTeams){
         e.preventDefault()
         const error = document.getElementById("error")
         console.log("error")
