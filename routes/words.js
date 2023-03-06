@@ -9,7 +9,6 @@ router.get('/random',(req,res) => {
 
     for (let i=0; i<=10; i++){
         const random = Math.floor(Math.random() * allWords.length);
-        console.log(allWords[random])
         wordsArray.push(allWords[random])
     }
 

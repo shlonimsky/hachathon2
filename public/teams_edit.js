@@ -1,6 +1,6 @@
 // * * * * * * GET TEAMS FROM LOCAL STORAGE
 const container = document.getElementById("members_container");
-
+const error = document.getElementById("error1")
 const inputName = document.getElementById("name") 
 
 const team_id = window.location.href.substring(33)
@@ -19,27 +19,11 @@ if (!team) {
             score : 0,
            }
            allTeams.push(team)
-           console.log(allTeams)
 }
 showTeamName(team.name)
 
 if (team.members) team.members.forEach(member => showMembers(member))
-// let members = []
 
-// try {
-//     teams = JSON.parse(teams)
-//     members = teams[team_id]["members"]
-//     input.value=teams[team_id]["name"]
-// } catch(err){
-//     console.log("Local storage is empty",err)
-// }
-// console.log("TEAMS changed: ",teams)
-// console.log("TEAM",team)
-// console.log(team.members)
-
-// function hideName(name){
-//     inputName.value = ""
-// }
 
 function clearField(e){
     e.target.value =""
@@ -49,9 +33,7 @@ function clearField(e){
 // * * * * * *  SECTION FOR RENDERING PAGE * * * * * * 
 const getColors = async () => {
     const response = await fetch('/api/colors')
-    console.log(response)
     const result = await response.json()
-    console.log("colors array",result)
     for (color of result){
         showColors(color)
     }
@@ -122,9 +104,8 @@ function addMember(e){
     let newMember = document.getElementById("member").value
     if (!newMember) return e.preventDefault()
     else if (team.members.includes(newMember)){
-        const error = document.getElementById("error1")
         error.classList.toggle("not_visible")
-        setTimeout((error) => {
+        setTimeout(() => {
             error.classList.toggle("not_visible")
          },4000)
         return e.preventDefault()

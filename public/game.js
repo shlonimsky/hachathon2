@@ -1,6 +1,11 @@
 let pause = document.getElementById("pause").textContent
 const timerContainer = document.getElementById("timer")
 const containerWord = document.getElementById("word")
+const yesAudio = document.getElementById("yes_audio")
+const noAudio = document.getElementById("no_audio")
+const timerIsOver = document.getElementById("timer_over")
+
+
 let interval
 const allTeams = JSON.parse(localStorage.getItem("teams"))
 const settings = JSON.parse(localStorage.getItem("settings"))
@@ -28,7 +33,10 @@ function startTimer(){
 function checkTimer () {
     const endGame = new Promise((resolve) => {
         if (timer===0) resolve("THE LAST WORD");
-    }).then(res => showTimer(res))
+    }).then(res => {
+        timerIsOver.play()
+        showTimer(res)}
+        )
 
     showTimer(timer)
     if (timer>0) timer --
@@ -75,9 +83,13 @@ function showNewWord(e){
     // e.preventDefault()
 
     const isGuessed = e.target.id
-    if (isGuessed === "yes") teamPlaying.score ++;
-    else if (settings.loosePoints) teamPlaying.score --;
-
+    if (isGuessed === "yes") {
+        yesAudio.play()
+        teamPlaying.score ++;
+    }
+    else if (settings.loosePoints) {
+        teamPlaying.score --;
+    }
     if (timer === 0) return gameIsEnded()
     e.preventDefault()
     wordsForRaund.splice(0,1)
@@ -105,4 +117,9 @@ function gameIsEnded (){
 
     localStorage.setItem("teams", JSON.stringify(allTeams))
     localStorage.setItem("words", JSON.stringify(usedWords))
+}
+
+function quitTheGame(e){
+    const quite = confirm('ARE YOU SURE YOU WANT TO QUIT THE GAME?')
+    if (!quite) e.preventDefault()
 }
