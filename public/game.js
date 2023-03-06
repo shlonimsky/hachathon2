@@ -61,7 +61,6 @@ function showTimer (text) {
 
 // ** ** ** ** ** REQUEST TO SERVER  ** ** ** ** ** ** 
 async function getRandomWords(){
-    console.log("fetching")
 
     const response = await fetch("/api/words/random")
     const result = await  response.json();
