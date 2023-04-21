@@ -4,7 +4,7 @@ const path = require('path')
 const router = express.Router()
 
 router.get('/',(req,res) => {
-    res.sendFile(path.resolve('public/home.html'))
+    res.sendFile(path.resolve('public/index.html'))
 })
 
 router.get('/teams',(req,res) => {

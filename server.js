@@ -23,9 +23,9 @@ app.use('/', router_get )
 app.use('/api/colors', router_colors)
 app.use('/api/words', router_words)
 
-// app.use(express.static(path.join(__dirname,"public")))
+app.use(express.static(path.join(__dirname,"public")))
 // app.get('*',(req,res)=>{
-//   res.sendFile(path.resolve(__dirname,'./public','home.html'))
+//   res.sendFile(path.resolve(__dirname,'./public','index.html'))
 // })
 
 // '/home - start new game/contine with previous teems(if teams were saved). 
