@@ -23,7 +23,7 @@ app.use('/', router_get )
 app.use('/api/colors', router_colors)
 app.use('/api/words', router_words)
 
-app.use(express.static(path.join(__dirname,"public")))
+// app.use(express.static(path.join(__dirname,"public")))
 // app.get('*',(req,res)=>{
 //   res.sendFile(path.resolve(__dirname,'./public','home.html'))
 // })
