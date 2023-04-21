@@ -8,23 +8,23 @@ router.get('/',(req,res) => {
 })
 
 router.get('/teams',(req,res) => {
-    res.sendFile(path.resolve('public/teams.html'))
+    res.sendFile(path.resolve(__dirname,'public/teams.html'))
 })
 
 router.get('/teams/edit/:id',(req,res) => {
-    res.sendFile(path.resolve('public/teams_edit.html'))
+    res.sendFile(path.resolve(__dirname,'public/teams_edit.html'))
 })
 
 router.get('/settings',(req,res) => {
-    res.sendFile(path.resolve('public/settings.html'))
+    res.sendFile(path.resolve(__dirname,'public/settings.html'))
 })
 
 router.get('/score',(req,res) => {
-    res.sendFile(path.resolve('public/score.html'))
+    res.sendFile(path.resolve(__dirname,'public/score.html'))
 })
 
 router.get('/game',(req,res) => {
-    res.sendFile(path.resolve('public/game.html'))
+    res.sendFile(path.resolve(__dirname,'public/game.html'))
 })
 
 module.exports = router
