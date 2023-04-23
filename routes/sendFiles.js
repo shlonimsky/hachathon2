@@ -24,7 +24,7 @@ router.get('/game',(req,res) => {
     res.sendFile(__dirname+'/public/game.html')
 })
 router.get('/',(req,res) => {
-    res.sendFile(path.resolve('public/index.html'))
+    res.sendFile(__dirname+'/public/index.html')
 })
 
 
