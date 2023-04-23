@@ -3,9 +3,6 @@ const path = require('path')
 
 const router = express.Router()
 
-router.get('/',(req,res) => {
-    res.sendFile(path.resolve('public/index.html'))
-})
 
 router.get('/teams',(req,res) => {
     res.sendFile(__dirname+'/public/teams.html')
@@ -26,5 +23,9 @@ router.get('/score',(req,res) => {
 router.get('/game',(req,res) => {
     res.sendFile(__dirname+'/public/game.html')
 })
+router.get('/',(req,res) => {
+    res.sendFile(path.resolve('public/index.html'))
+})
+
 
 module.exports = router
