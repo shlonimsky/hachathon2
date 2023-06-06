@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.get('/teams',(req,res) => {
-    res.sendFile('https://alias-theta.vercel.app/public/teams.html')
+    res.sendFile('https://alias-git-main-shlonimsky.vercel.app/teams.html')
 })
 
 router.get('/teams/edit/:id',(req,res) => {
