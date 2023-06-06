@@ -1,7 +1,7 @@
 {
   "name": "hachathon2",
   "version": "1.0.0",
-  "proxy" : "https://alias-theta.vercel.app",
+  "proxy" : "https://alias-six.vercel.app",
   "description": "The Alias  game application with using HTML,CSS, JS, Nodejs,SQL",
   "main": "server.js",
   "scripts": {

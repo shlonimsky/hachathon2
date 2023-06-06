@@ -61,7 +61,7 @@ async function showAvatars(){
         div.classList.add("image_container");
         div.addEventListener("click", changeAvatar)
         const img = document.createElement("img");
-        img.src = `/images/a${i}.png`;
+        img.src = `${__dirname}/images/a${i}.png`;
         div.appendChild(img);
         container.appendChild(div);
     }
