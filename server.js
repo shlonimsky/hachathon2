@@ -36,3 +36,15 @@ app.use('/', router_get )
 // /setings choose game settings 
 // /score-board  the queue of team. player and winner
 // /game + pause
+
+
+//vercel.json=
+// {
+//     "rewrites": [
+//         { "source": "/teams", "destination": "/teams.html" },
+//         { "source": "/teams/edit/:id", "destination": "/teams_edit.html" },
+//         { "source": "/settings", "destination": "/settings.html" },
+//         { "source": "/score", "destination": "/score.html" },
+//         { "source": "/game", "destination": "/game.html" }
+//     ]
+// }
