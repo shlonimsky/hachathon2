@@ -3,9 +3,14 @@ const path = require('path')
 
 const router = express.Router()
 
+router.get('/',(req,res) => {
+    // res.sendFile(__dirname+'/public/index.html')
+    res.sendFile(__dirname+'/public/teams.html')
+
+})
 
 router.get('/teams',(req,res) => {
-    res.sendFile('https://alias-git-main-shlonimsky.vercel.app/teams.html')
+    res.sendFile(__dirname+'/public/teams.html')
 })
 
 router.get('/teams/edit/:id',(req,res) => {
@@ -22,9 +27,6 @@ router.get('/score',(req,res) => {
 
 router.get('/game',(req,res) => {
     res.sendFile(__dirname+'/public/game.html')
-})
-router.get('/',(req,res) => {
-    res.sendFile(__dirname+'/public/index.html')
 })
 
 
