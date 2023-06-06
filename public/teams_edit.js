@@ -10,7 +10,7 @@ let team = allTeams.find(el => el["id"] == team_id)
 if (!team) {
     team = {
             id : team_id,
-            avatar : "images/a1.png",
+            avatar : "./images/a1.png",
             color : "white",
             isPlaying : false,
             memberQueue : 0,
@@ -61,7 +61,7 @@ async function showAvatars(){
         div.classList.add("image_container");
         div.addEventListener("click", changeAvatar)
         const img = document.createElement("img");
-        img.src = `${__dirname}/images/a${i}.png`;
+        img.src = `./images/a${i}.png`;
         div.appendChild(img);
         container.appendChild(div);
     }
