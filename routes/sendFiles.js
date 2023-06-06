@@ -10,9 +10,9 @@ router.get('/teams',(req,res) => {
     // res.sendFile('/teams.html')
     // console.log(__dirname+'/../public/teams.html');
 //   res.sendFile('/Users/anastasiiashlonimsky/Documents/Full_Stack_JS/Hackathon/hachathon2/public/teams.html')
-//   res.sendFile(path.join(__dirname,'..','./public', 'teams.html'))
+  res.sendFile(path.join(__dirname,'..','./public', 'teams.html'))
 
-  res.send(JSON.stringify({msg: "Team page"}))
+//   res.send(JSON.stringify({msg: "Team page"}))
 
 })
 
@@ -31,10 +31,10 @@ router.get('/score',(req,res) => {
 router.get('/game',(req,res) => {
     res.sendFile(path.join(__dirname,'..','./public','game.html'))
 })
-// router.get('/',(req,res) => {
-//     console.log(__dirname);
-//     res.sendFile(__dirname+'/public/index.html')
-// })
+router.get('/',(req,res) => {
+    console.log(__dirname);
+    res.sendFile(path.join(__dirname,'..','./public','index.html'))
+})
 
 
 module.exports = router

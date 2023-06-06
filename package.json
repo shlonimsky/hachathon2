@@ -1,12 +1,11 @@
 {
   "name": "hachathon2",
   "version": "1.0.0",
-  "proxy" : "https://alias-six.vercel.app",
   "description": "The Alias  game application with using HTML,CSS, JS, Nodejs,SQL",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
