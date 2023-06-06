@@ -24,7 +24,7 @@ router.get('/settings',(req,res) => {
 })
 
 router.get('/score',(req,res) => {
-    res.sendFile(_path.join(__dirname,'..','./public', 'score.html'))
+    res.sendFile(path.join(__dirname,'..','./public', 'score.html'))
 })
 
 router.get('/game',(req,res) => {
