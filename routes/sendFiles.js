@@ -5,7 +5,7 @@ const router = express.Router()
 
 
 router.get('/teams',(req,res) => {
-    res.sendFile(__dirname+'/public/teams.html')
+    res.sendFile('https://alias-theta.vercel.app/public/teams.html')
 })
 
 router.get('/teams/edit/:id',(req,res) => {
@@ -26,6 +26,7 @@ router.get('/game',(req,res) => {
 router.get('/',(req,res) => {
     res.sendFile(__dirname+'/public/index.html')
 })
+
 
 
 module.exports = router
