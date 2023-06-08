@@ -21,7 +21,7 @@ app.listen(process.env.PORT, () => console.log(`LISTENING  PORT ${process.env.PO
 
 
 app.use('/api/colors', router_colors)
-app.use('/api/words', router_words)
+app.use('/words', router_words)
 app.use('/', router_get )
 
 

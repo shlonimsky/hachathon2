@@ -5,7 +5,7 @@
                 { "source": "/settings", "destination": "/settings.html" },
                 { "source": "/score", "destination": "/score.html" },
                 { "source": "/game", "destination": "/game.html" },
-                { "source": "/api/words/random", "destination": "https://www.zippia.com/junior-software-developer-jobs/jobs/" },
+                { "source": "/words", "destination": "/words" },
                 { "source": "/api/colors", "destination": "/api/colors" }
 
             ]
