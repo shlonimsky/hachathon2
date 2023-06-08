@@ -47,23 +47,23 @@ res.sendFile('teams.html')
 
 })
 router.get('/teams/edit/:id',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public','teams_edit.html'))
+    res.sendFile(path.join(__dirname,'..','./assets','teams_edit.html'))
 })
 
 router.get('/settings',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public', 'settings.html'))
+    res.sendFile(path.join(__dirname,'..','./assets', 'settings.html'))
 })
 
 router.get('/score',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public', 'score.html'))
+    res.sendFile(path.join(__dirname,'..','./assets', 'score.html'))
 })
 
 router.get('/game',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public','game.html'))
+    res.sendFile(path.join(__dirname,'..','./assets','game.html'))
 })
 router.get('/',(req,res) => {
     console.log(__dirname);
-    res.sendFile(path.join(__dirname,'..','./public','index.html'))
+    res.sendFile(path.join(__dirname,'..','./assets','index.html'))
 })
 
 
