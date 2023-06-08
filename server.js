@@ -1,4 +1,5 @@
 const dotenv = require('dotenv')
+dotenv.config()
 const path = require('path')
 
 const express = require('express')
@@ -8,60 +9,20 @@ const router_get = require('./routes/sendFiles.js')
 const router_colors = require('./routes/colors.js')
 const router_words = require('./routes/words.js')
 
-dotenv.config()
 
 const app = express();
 app.use(cors())
 
 app.use(express.json())
-// app.use('/',express.static(path.join(__dirname, './public')))
+app.use('/',express.static(path.join(__dirname, './public')))
 app.use(express.urlencoded({extended:true}))
 
 app.listen(process.env.PORT, () => console.log(`LISTENING  PORT ${process.env.PORT}`))
-app.get('/nastya', (req,res) => {
-res.send("helooooo")
-
-})
-
-// app.use('/api/colors', router_colors)
-// app.use('/api/words', router_words)
-// app.use('/game', router_get )
-
-app.get('/teams',(req,res) => {
-    // console.log(__dirname);
-    // res.sendFile('/teams.html')
-    // res.sendFile('/teams.html')
-    // console.log(__dirname+'/../public/teams.html');
-//   res.sendFile('/Users/anastasiiashlonimsky/Documents/Full_Stack_JS/Hackathon/hachathon2/public/teams.html')
-//   res.sendFile(path.join(__dirname,'../public', 'teams.html'))
-  res.sendFile(__dirname+'/teams.html')
 
 
-//   res.send(JSON.stringify({msg: "Team page"}))
-
-})
-
-app.get('/teams/edit/:id',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public','teams_edit.html'))
-})
-
-app.get('/settings',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public', 'settings.html'))
-})
-
-app.get('/score',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public', 'score.html'))
-})
-
-app.get('/game',(req,res) => {
-    res.sendFile(path.join(__dirname,'..','./public','game.html'))
-})
-// app.get('/',(req,res) => {
-//     console.log(__dirname);
-//     res.sendFile(path.join(__dirname,'..','./public','index.html'))
-// })
-
-
+app.use('/api/colors', router_colors)
+app.use('/api/words', router_words)
+app.use('/', router_get )
 
 
 // app.use(express.static(path.join(__dirname,"public")))
