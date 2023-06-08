@@ -85,8 +85,11 @@ function showNewWord(e){
     if (isGuessed === "yes") {
         yesAudio.play()
         teamPlaying.score ++;
+    } else {
+        noAudio.play()
     }
-    else if (settings.loosePoints) {
+
+     if (settings.loosePoints) {
         teamPlaying.score --;
     }
     if (timer === 0) return gameIsEnded()
