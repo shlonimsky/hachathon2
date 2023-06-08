@@ -3,7 +3,9 @@ const container = document.getElementById("members_container");
 const error = document.getElementById("error1")
 const inputName = document.getElementById("name") 
 
-const team_id = window.location.href.substring(33)
+const url = window.location.href
+const team_id = url.substring(url.lastIndexOf('/')+1)
+// console.log(team_id);
 let allTeams = JSON.parse(localStorage.getItem("teams")) || []
 let team = allTeams.find(el => el["id"] == team_id)
 
