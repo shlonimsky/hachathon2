@@ -22,7 +22,42 @@ app.listen(process.env.PORT, () => console.log(`LISTENING  PORT ${process.env.PO
 
 app.use('/api/colors', router_colors)
 app.use('/api/words', router_words)
-app.use('/game', router_get )
+// app.use('/game', router_get )
+
+app.get('/teams',(req,res) => {
+    // console.log(__dirname);
+    // res.sendFile('/teams.html')
+    // res.sendFile('/teams.html')
+    // console.log(__dirname+'/../public/teams.html');
+//   res.sendFile('/Users/anastasiiashlonimsky/Documents/Full_Stack_JS/Hackathon/hachathon2/public/teams.html')
+//   res.sendFile(path.join(__dirname,'../public', 'teams.html'))
+  res.sendFile(path.resolve(__dirname,'./public', 'teams.html'))
+
+//   res.send(JSON.stringify({msg: "Team page"}))
+
+})
+
+app.get('/teams/edit/:id',(req,res) => {
+    res.sendFile(path.join(__dirname,'..','./public','teams_edit.html'))
+})
+
+app.get('/settings',(req,res) => {
+    res.sendFile(path.join(__dirname,'..','./public', 'settings.html'))
+})
+
+app.get('/score',(req,res) => {
+    res.sendFile(path.join(__dirname,'..','./public', 'score.html'))
+})
+
+app.get('/game',(req,res) => {
+    res.sendFile(path.join(__dirname,'..','./public','game.html'))
+})
+app.get('/',(req,res) => {
+    console.log(__dirname);
+    res.sendFile(path.join(__dirname,'..','./public','index.html'))
+})
+
+
 
 
 // app.use(express.static(path.join(__dirname,"public")))
