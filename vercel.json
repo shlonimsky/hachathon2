@@ -1,3 +1,10 @@
 {
-    "public": true
+    "rewrites": [
+                { "source": "/teams", "destination": "/teams.html" },
+                { "source": "/teams/edit/:id", "destination": "/teams_edit.html" },
+                { "source": "/settings", "destination": "/settings.html" },
+                { "source": "/score", "destination": "/score.html" },
+                { "source": "/game", "destination": "/game.html" },
+                { "source": "/(.*)", "destination": "/" }
+            ]
 }
