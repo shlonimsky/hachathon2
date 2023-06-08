@@ -1,5 +1,4 @@
 const dotenv = require('dotenv')
-dotenv.config()
 const path = require('path')
 
 const express = require('express')
@@ -9,6 +8,7 @@ const router_get = require('./routes/sendFiles.js')
 const router_colors = require('./routes/colors.js')
 const router_words = require('./routes/words.js')
 
+dotenv.config()
 
 const app = express();
 app.use(cors())
@@ -23,8 +23,8 @@ res.send("helooooo")
 
 })
 
-app.use('/api/colors', router_colors)
-app.use('/api/words', router_words)
+// app.use('/api/colors', router_colors)
+// app.use('/api/words', router_words)
 // app.use('/game', router_get )
 
 app.get('/teams',(req,res) => {
