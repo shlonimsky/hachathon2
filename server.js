@@ -14,14 +14,16 @@ const app = express();
 app.use(cors())
 
 app.use(express.json())
-app.use('/',express.static(path.join(__dirname, './public')))
+// app.use('/',express.static(path.join(__dirname, './public')))
+
+
 app.use(express.urlencoded({extended:true}))
 
 app.listen(process.env.PORT, () => console.log(`LISTENING  PORT ${process.env.PORT}`))
 
 
 app.use('/api/colors', router_colors)
-app.use('/words', router_words)
+app.use('/api/words', router_words)
 app.use('/', router_get )
 
 

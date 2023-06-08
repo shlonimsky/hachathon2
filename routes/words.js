@@ -4,7 +4,7 @@ const allWords = require('../database/words1.js')
 
 const router = express.Router()
 
-router.get('/',(req,res) => {
+router.get('/random',(req,res) => {
     let wordsArray  = []
 
     for (let i=0; i<=10; i++){

@@ -5,7 +5,7 @@
                 { "source": "/settings", "destination": "/settings.html" },
                 { "source": "/score", "destination": "/score.html" },
                 { "source": "/game", "destination": "/game.html" },
-                { "source": "/words", "destination": "/words" },
+                { "source": "/api/words/random", "destination": "/api/words/random" },
                 { "source": "/api/colors", "destination": "/api/colors" }
 
             ]
