@@ -18,7 +18,7 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 app.listen(process.env.PORT, () => console.log(`LISTENING  PORT ${process.env.PORT}`))
-app.get('/', (req,res) => {
+app.get('/nastya', (req,res) => {
 res.send("helooooo")
 
 })
