@@ -31,7 +31,8 @@ app.get('/teams',(req,res) => {
     // console.log(__dirname+'/../public/teams.html');
 //   res.sendFile('/Users/anastasiiashlonimsky/Documents/Full_Stack_JS/Hackathon/hachathon2/public/teams.html')
 //   res.sendFile(path.join(__dirname,'../public', 'teams.html'))
-  res.sendFile(__dirname+'/public/teams.html')
+//   res.sendFile(__dirname+'/public/teams.html')
+res.send("helooooo")
 
 //   res.send(JSON.stringify({msg: "Team page"}))
 
