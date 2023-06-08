@@ -43,10 +43,13 @@ app.use('/', router_get )
 //vercel.json=
 // {
 //     "rewrites": [
-//         { "source": "/teams", "destination": "/teams.html" },
-//         { "source": "/teams/edit/:id", "destination": "/teams_edit.html" },
-//         { "source": "/settings", "destination": "/settings.html" },
-//         { "source": "/score", "destination": "/score.html" },
-//         { "source": "/game", "destination": "/game.html" }
-//     ]
+//                 { "source": "/teams", "destination": "/teams.html" },
+//                 { "source": "/teams/edit/:id", "destination": "/teams_edit.html" },
+//                 { "source": "/settings", "destination": "/settings.html" },
+//                 { "source": "/score", "destination": "/score.html" },
+//                 { "source": "/game", "destination": "/game.html" },
+//                 { "source": "/api/words/random", "destination": "/routes/words" },
+//                 { "source": "/api/colors", "destination": "/api/colors" }
+
+//             ]
 // }
