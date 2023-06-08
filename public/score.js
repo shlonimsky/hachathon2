@@ -84,3 +84,5 @@ function getTheWinner(){
     if ( maxScore >= settings.scoreToWin) return allTeams.find(team => team.score === maxScore)
     else return false
 }
+
+
